@@ -1,0 +1,41 @@
+ul {
+  list-style: square;
+}
+
+p {
+  color: #000;
+}
+
+h1 {
+  color: red;
+}
+
+h2 {
+  color: blueviolet;
+}
+
+h3 {
+  color: crimson;
+}
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px;
+  font-weight: 500;
+  color: darkgoldenrod;
+}
+
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px;
+  font-weight: 500;
+  color: darkgoldenrod;
+}
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px;
+  font-weight: 500;
+  color: darkgoldenrod;
+}
+/*# sourceMappingURL=style.css.map */

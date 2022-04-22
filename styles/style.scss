@@ -1,0 +1,136 @@
+@import './variables.scss';
+
+$mainColor:red;
+
+$bgColor:green;
+$defaultColor: blue;
+
+$primary_1: #a2b9bc;
+$primary_2: #b2ad7f;
+$primary_3: #878f99;
+
+/* use the variables */
+.main-header {
+  background-color: $primary_1;
+}
+
+.menu-left {
+  background-color: $primary_2;
+}
+
+.menu-right {
+  background-color: $primary_3;
+}
+
+
+.button-basic {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button-report  {
+    @extend .button-basic;
+    background-color: red;
+  }
+  
+  .button-submit  {
+    @extend .button-basic;
+    background-color: green;
+    color: white;
+  }
+
+  
+ul{
+    list-style: square;
+}
+p{
+    color:#000;
+}         
+ h1{
+    color: $mainColor;
+}
+h2{
+    color:blueviolet;
+
+}
+h3{
+    color:crimson;
+}
+
+//comment
+
+//function
+
+@mixin headingStyle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    font-weight: 500;
+    
+ 
+}
+
+h1{
+    @include headingStyle;
+}
+
+h2{
+    @include headingStyle;
+}
+
+
+
+// //put argument- property pass
+
+h1{
+    @include headingStyle(green);
+}
+
+@mixin headingStyle($color){
+    $color:black;
+}
+
+
+
+
+@mixin headingStyle($color: $defaultColor){
+    color: $color;
+    h4{
+        @include headingStyle(pink);
+    }
+}
+
+// //extend
+
+.button{
+    padding:5px;
+    border:none;
+}
+.super-button{
+    @extend .button;
+    background-color: $bgColor;
+}
+
+//loop
+
+@for $i from 1 through 6{
+    h#{$i}
+    {
+        @include headingStyle($defaultColor);
+    }
+}
+
+
+@for $i from 1 through 100{
+    .p#{$i}
+    {
+        padding: #{$i}px;
+    }
+    .pt-#{$i}
+    {
+        padding-top: #{$i}px;
+    }
+    
+}
